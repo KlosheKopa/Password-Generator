@@ -7,17 +7,17 @@ const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 
 //Returns a letter from the letter array lowercase
 function getLowerLetter(){
-  return letters[Math.floor(Math.random() * (letters.length + 1))];
+  return letters[Math.floor(Math.random() * letters.length)];
 }
 
 //Returns a letter from the letter array uppercase
 function getUpperLetter(){
-  return letters[Math.floor(Math.random() * (letters.length + 1))].toUpperCase();
+  return letters[ Math.floor(Math.random() * letters.length)].toUpperCase();
 }
 
 //Returns a special character from the special character array
 function getSpecialCharacter(){
-  return specialCharacters[Math.floor(Math.random() * (specialCharacters.length + 1))];
+  return specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
 }
 
 //Returns a random number from 0 to 9
@@ -79,7 +79,7 @@ function generatePasswordChild(lower, upper, special, number, length){
 
   //Loop that adds an additional amount of random characters of the specified types based on the options array and switch statement
   for (let i = 0; i < length - options.length; i++){
-    let random = options[Math.floor(Math.random() * (options.length + 1))];
+    let random = options[Math.floor(Math.random() * options.length)];
     switch (random){
       case 1:
         password += getLowerLetter();
